@@ -65,16 +65,14 @@ div.main {
     height: 800px;
 
     background-image: url(./Media/background-image.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
 
-
     max-height: 150%;
     justify-content: space-around;
     align-items: flex-end;
-    
 }
 
 .button {
@@ -94,6 +92,7 @@ div.main {
     border-radius: 20px;
     margin-bottom: 150px;
 }
+
 
 .button:hover {
     cursor: pointer;
