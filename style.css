@@ -139,7 +139,7 @@ div.main img {
 div.rules {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
 }
 
