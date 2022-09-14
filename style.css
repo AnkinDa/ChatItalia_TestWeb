@@ -3,10 +3,16 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0 solid transparent;
     font-family: 'Poppins', sans-serif;
 }
 
+.hidden {
+    overflow: hidden;
+}
+
 header {
+    z-index: 10000;
     display: flex;
     top: 0;
     position: fixed;
@@ -15,7 +21,7 @@ header {
     height: 8vh;
     min-height: 8vh;
 
-    background-color: rgb(104, 101, 101);
+    background-color: #fff;
 
     justify-content: space-between;
     align-items: center;
@@ -46,7 +52,7 @@ header p.LoginSignUp {
 
     color: white;
     font-weight: 600;
-    background-color: rgb(0, 204, 255);
+    background-color: rgb(39, 39, 39);
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
 }
@@ -58,8 +64,10 @@ header p.LoginSignUp:hover {
     cursor: pointer; 
 }
 
-div.main {
+div.main-container {
     display: flex;
+    flex-direction: column;
+    z-index: 14;
     margin-top: 8vh;
     width: 100%;
     height: 800px;
@@ -69,10 +77,23 @@ div.main {
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
+}
 
+div.main-container img{
+    width: 40%;
+    height: 90%;
+
+    margin: -30px auto -100px auto;
+}
+
+div.main {
+    z-index: 15;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
     max-height: 150%;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .button {
@@ -82,17 +103,27 @@ div.main {
 
     min-width: 55px;
     max-width: 100px;
-    min-height: 15px;
+    min-height: 5px;
     max-height: 20px;
+    
+    align-self: center; 
 
     font-weight: 600;
     font-size: 20px;
 
-    padding: 15px 50px 20px 50px;
+    padding: 10px 50px 15px 50px;
     border-radius: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
+.spacerMain {
+    width: 30%;
+}
+
+.button2{
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
 .button:hover {
     cursor: pointer;
@@ -104,3 +135,96 @@ div.main img {
     width: 100%;
     height: 100%;
 }
+
+div.rules {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.rule-container {
+    background-color: #fff;
+    margin: 20px;
+    padding: 25px;
+    box-shadow: 3px 7px 50px #000;
+}
+
+.rule-list {
+    margin-left: 15px;
+}
+
+.rule-list ul {
+    margin-left: 20px;
+}
+
+.rule-list li {
+    margin-bottom: 3px;
+}
+
+.rule-container .title, 
+.rule-container .sub-title {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.rule-container .sub-title {
+    color: rgb(99, 0, 0);
+}
+
+.rule-container p {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE RULE SETTINGS */
+
+.rules .world-rules {
+    opacity: 1;
+    transform: translateX(70%);
+    margin-right: 0;
+    margin-left: 0;
+}
+.rules.active .world-rules {
+   opacity: 0;
+   transform: translateX(-70%);
+   transition: all .2s ease;
+}
+.rules .discord-rules {
+    opacity: 0;
+    transform: translateX(35%);
+    
+   transition: all .2s ease;
+}
+.rules.active .discord-rules {
+   opacity: 1;
+   transform: translateX(-35%);
+}
+
+.rules-control {
+    display: flex;
+    justify-content: center;
+}
+
+.button-rule {
+    padding: 10px;
+    border-radius: 30px;
+    margin: 20px 5px 10px 5px;
+    background-color:rgb(0, 181, 226);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.button-rule:hover {
+    cursor: pointer;
+    background-color: rgb(0, 102, 128);
+
+    transition: all .18s ease;
+}
+.button-rule.active {
+    border: 3px solid red;
+
+    transition: all .18s ease;
+}
+
+/* RESPONSIVE RULE SETTINGS */
