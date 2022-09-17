@@ -139,7 +139,7 @@ div.main img {
 div.rules {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -178,7 +178,7 @@ div.rules {
 }
 
 /* RESPONSIVE RULE SETTINGS */
-
+/*
 .rules .world-rules {
     opacity: 1;
     transform: translateX(70%);
@@ -225,6 +225,6 @@ div.rules {
     border: 3px solid red;
 
     transition: all .18s ease;
-}
+} /*
 
 /* RESPONSIVE RULE SETTINGS */
